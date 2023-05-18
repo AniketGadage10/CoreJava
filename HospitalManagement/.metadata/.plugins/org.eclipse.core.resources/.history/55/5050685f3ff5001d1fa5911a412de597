@@ -1,0 +1,21 @@
+package com.IOutils;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
+import com.code.patient;
+
+public interface Utils {
+	
+	public static void storePatient(ArrayList<patient>p,String f)
+	{
+		try (ObjectOutputStream w=new ObjectOutputStream(new FileOutputStream(f))){
+			w.writeObject(p);
+			System.out.println("DATA STORE SUCESSFULL");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

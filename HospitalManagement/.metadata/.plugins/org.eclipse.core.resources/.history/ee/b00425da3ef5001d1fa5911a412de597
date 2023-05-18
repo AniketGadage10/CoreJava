@@ -1,0 +1,11 @@
+package com.IOutils;
+
+import java.util.ArrayList;
+
+import com.code.patient;
+
+public interface Utils {
+	
+	public ArrayList<patient>
+
+}

@@ -1,0 +1,17 @@
+package com.code;
+
+import java.time.LocalDate;
+
+public class patient {
+	private serialNo int;
+	private String PatientName;
+	private int age;
+	private String gender;
+	private String address;
+	private String PhoneNo;
+	private String disese;
+	private LocalDate AdmitDate;
+	private double annualIncomne;
+	
+
+}

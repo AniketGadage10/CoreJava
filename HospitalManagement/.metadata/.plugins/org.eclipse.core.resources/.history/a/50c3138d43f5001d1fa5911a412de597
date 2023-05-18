@@ -1,0 +1,60 @@
+package com.tester;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.Enum.RoomType;
+import com.IOutils.Utils;
+import com.Validation.PatientValidation;
+import com.code.patient;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			ArrayList<patient> p = new ArrayList<>();
+			ArrayList<patient> r = new ArrayList<>();
+			System.out.println(" Enter The File Name ");
+			String s = sc.next();
+			boolean status = false;
+			do {
+				System.out.println(" 1 : ADD PATIENT ");
+				System.out.println(" Enter The Choice ");
+				switch (sc.nextInt()) {
+				case 1:
+					System.out.println("hi");
+					System.out.println("serialNo,patientName,  age,  gender,  address,  phoneNo, disese,"
+							+ "admitDate('YYYY-MM-DD'),annualIncomne,RoomType");
+					patient t = PatientValidation.ValidatePatient(sc.nextInt(), sc.next(), sc.nextInt(), sc.next(),
+							sc.next(), sc.next(), sc.next(), sc.next(), sc.nextDouble(), sc.next().toUpperCase());
+					System.out.println("ada");
+					p.add(t);
+					System.out.println("-------");
+
+					Utils.storePatient(p, s);
+					break;
+				case 2:
+					System.out.println("PATIENT DETAILS");
+					r=Utils.RestorePatient(s);
+					r.forEach(System.out::println);		
+					break;
+
+				case 7:
+					status = true;
+					break;
+				}
+
+			} while (!status);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			sc.nextLine();
+		}
+
+	}
+
+}
+
+//2000 amiket 22 male pune 50000 abc 2023-05-18 74744 GENERAL

@@ -1,0 +1,26 @@
+package com.Validation;
+
+import java.time.LocalDate;
+import com.Exception.*;
+import com.Enum.RoomType;
+
+public interface PatientValidation {
+
+	public static void ValidatePatient(int serialNo, String patientName, int age, String gender, String address,
+			String phoneNo, String disese, LocalDate admitDate, double annualIncomne, String t)
+			throws PatientException {
+		RoomType t1 = checkRoomType(t);
+
+	}
+
+	public static RoomType checkRoomType(String room) throws PatientException {
+		RoomType t = RoomType.valueOf(room);
+		for (RoomType t1 : RoomType.values()) {
+			if (t.name().equals(t1.name())) {
+				return t;
+			}
+		}
+		throw new com.Exception.PatientException("Wrong Room Type");
+	}
+
+}

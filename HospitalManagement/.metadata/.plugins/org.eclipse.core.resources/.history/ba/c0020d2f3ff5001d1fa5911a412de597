@@ -1,0 +1,18 @@
+package com.IOutils;
+
+import java.util.ArrayList;
+
+import com.code.patient;
+
+public interface Utils {
+	
+	public static ArrayList<patient> storePatient(ArrayList<patient>p,String f)
+	{
+		try {
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

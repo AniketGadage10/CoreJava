@@ -1,0 +1,7 @@
+package com.IOutils;
+
+public interface Utils {
+	
+	
+
+}

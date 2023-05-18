@@ -1,0 +1,6 @@
+package com.Exception;
+
+public class PatientValidation extends Exception{
+	public ()
+
+}

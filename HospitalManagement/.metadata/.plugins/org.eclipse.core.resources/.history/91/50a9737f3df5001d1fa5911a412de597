@@ -1,0 +1,8 @@
+package com.Exception;
+
+public class PatientValidation extends Exception {
+	public PatientValidation(String s) {
+		super(s);
+	}
+
+}
